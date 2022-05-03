@@ -9,8 +9,8 @@ const Profile = () => {
   return (
     <div className='shadow-md'>
       <div className='bg-lightblue h-screen'>
-        <div className='pt-52 flex flex-col md:flex-row md:justify-around items-center gap-32 text-3xl text-shadow-xl font-Lora text-black'>
-          <div id='t-div' className='order-1'>
+        <div className='pt-20 md:pt-52 flex flex-col md:flex-row md:justify-around items-center gap-32 text-3xl text-shadow-xl font-Lora text-black'>
+          <div id='t-div' className='md:order-1'>
             <span title='T;'>T;</span>
           </div>
           <div className='flex flex-col items-left gap-32 text-3xl text-shadow-xl font-Lora text-black'>
