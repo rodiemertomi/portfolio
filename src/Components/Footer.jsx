@@ -63,9 +63,9 @@ const Footer = () => {
         Socials
         <ul>
           {Socials.map(element => (
-            <li>
-              <a href={element.path} target='_blank' key={element.name} rel='noreferrer'>
-                <i class={element.icon}>{` ${element.name}`}</i>
+            <li key={element.name}>
+              <a href={element.path} target='_blank' rel='noreferrer'>
+                <i className={element.icon}>{` ${element.name}`}</i>
               </a>
             </li>
           ))}
@@ -76,7 +76,7 @@ const Footer = () => {
         <ul>
           {Contact.map(element => (
             <li key={element.name}>
-              <i class={element.icon}></i>
+              <i className={element.icon}></i>
               {` ${element.name}`}
             </li>
           ))}
