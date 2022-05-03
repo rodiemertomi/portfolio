@@ -7,8 +7,8 @@ import { batch, Fade, Sticky, MoveOut, MoveIn } from 'react-scroll-motion'
 
 const AboutMe2 = () => {
   const fadeUp = batch(Fade(), Sticky(), MoveOut(0, -1000))
-  const fadeInLeft = batch(MoveIn(0, 1000), Fade(), Sticky(), MoveOut(-1000, 0))
-  const fadeInRight = batch(MoveIn(0, 1000), Fade(), Sticky(), MoveOut(1000, 0))
+  const fadeInLeft = batch(MoveIn(0, 1000), Fade(), Sticky(), MoveOut(-2000, 0))
+  const fadeInRight = batch(MoveIn(0, 1000), Fade(), Sticky(), MoveOut(2000, 0))
 
   useEffect(() => {
     Aos.init({ duration: 2000 })
@@ -39,7 +39,7 @@ const AboutMe2 = () => {
         />
       </div>
       <div className='flex flex-col items-center justify-start h-auto font-Lora text-3xl text-shadow-md'>
-        <div className='sticky top-20'>
+        <div className='sticky top-20 md:top-32'>
           <span data-aos='fade-up' className='font-Lora text-3xl text-shadow-md'>
             My Skills
           </span>
@@ -49,10 +49,10 @@ const AboutMe2 = () => {
             <Scrolls
               page={1}
               content={
-                <div>
+                <div className='flex flex-col items-center justify-center text-center gap-20'>
                   <img
                     src={require('../assets/images/javaLogo.jpg')}
-                    className='rounded-md'
+                    className='rounded-md w-auto md:w-[50%]'
                     alt=''
                   />
                   <span>

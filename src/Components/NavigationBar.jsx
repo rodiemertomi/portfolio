@@ -19,12 +19,12 @@ const NavigationBar = () => {
         </div>
         <div
           onClick={() => setOpen(!open)}
-          className='text-3xl absolute right-8 top-4 cursor-pointer md:hidden hover:text-lightblue transition-all duration-200'
+          className='text-3xl absolute right-8 top-4 cursor-pointer lg:hidden hover:text-lightblue transition-all duration-200'
         >
           <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
         </div>
         <ul
-          className={`md:flex md:items-center gap-16 font-Lora text-2xl md:text-3xl md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in-out ${
+          className={`md:flex md:items-center md:justify-between md:gap-6 gap-16 font-Lora text-2xl md:text-3xl md:py-8 pb-12 absolute lg:static bg-white md:z-auto z-[-1] left-0 w-full md:w-full md:pl-0 pl-9 md:pr-4 transition-all duration-500 ease-in-out ${
             open ? 'top-20' : 'top-[-300px]'
           }`}
         >

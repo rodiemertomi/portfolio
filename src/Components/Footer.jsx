@@ -71,7 +71,7 @@ const Footer = () => {
           ))}
         </ul>
       </div>
-      <div className='pt-5'>
+      <div className='pt-5 md:pt-0'>
         Contact Me
         <ul>
           {Contact.map(element => (
