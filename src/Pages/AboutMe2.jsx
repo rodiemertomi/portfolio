@@ -15,20 +15,20 @@ const AboutMe2 = () => {
   }, [])
   return (
     <div className='bg-lightblue'>
-      <div className='h-screen'>
+      <div className='h-[90vh]'>
         <Scrolls
           page={0}
           content={
-            <div className='flex flex-col md:flex-row md:justify-between items-center justify-between gap-20 text-left'>
+            <div className='flex flex-col md:flex-row md:justify-between items-center md:gap-20 gap-5 text-left'>
               <div>
                 <img
                   src={require('../assets/images/latest.jpg')}
-                  alt='recognition.jpg'
+                  alt='latest.jpg'
                   className='rounded-full w-auto shadow-xl'
                 />
               </div>
               <div>
-                <span className='text-lg font-Lora text-left text-shadow-xl'>
+                <span className='text-lg font-Lora text-left text-shadow-xl md:text-2xl'>
                   Hi! I'm Rodiemer Tominez, an undergrad of Marine Transportation, in pursuit of my
                   passion for Information Technology.
                 </span>
@@ -38,7 +38,7 @@ const AboutMe2 = () => {
           animation={fadeUp}
         />
       </div>
-      <div className='flex flex-col items-center justify-start h-auto font-Lora text-3xl text-shadow-md'>
+      <div className='flex flex-col items-center justify-start h-auto font-Lora text-lg text-shadow-md'>
         <div className='sticky top-20 md:top-32'>
           <span data-aos='fade-up' className='font-Lora text-3xl text-shadow-md'>
             My Skills
@@ -49,15 +49,15 @@ const AboutMe2 = () => {
             <Scrolls
               page={1}
               content={
-                <div className='flex flex-col items-center justify-center text-center gap-20'>
+                <div className='flex flex-col items-center justify-center text-center gap-5 text-shadow-xl'>
                   <img
                     src={require('../assets/images/javaLogo.jpg')}
-                    className='rounded-md w-auto md:w-[50%]'
+                    className='rounded-md w-auto md:w-1/2 shadow-xl'
                     alt=''
                   />
-                  <span>
+                  <span className='text-sm'>
                     Java was my first programming language coming into Information Technology, I
-                    learned basic to intermediate level of{' '}
+                    learned basic to intermediate level of knowledge in Java Programming
                   </span>
                 </div>
               }
@@ -68,9 +68,17 @@ const AboutMe2 = () => {
             <Scrolls
               page={2}
               content={
-                <div>
-                  <img src={require('../assets/images/python.png')} className='rounded-md' alt='' />
-                  <span>Python</span>
+                <div className='flex flex-col items-center justify-center text-center gap-10 text-shadow-xl'>
+                  <img
+                    src={require('../assets/images/python.png')}
+                    className='rounded-md w-auto md:w-1/2 shadow-xl'
+                    alt=''
+                  />
+                  <span className='text-sm'>
+                    Going from Java to Python was a game changer, even though I studied it for just
+                    a brief period I learned quite a bit from it. I even got the chance to teach my
+                    underclassmen a thing or two about Python.
+                  </span>
                 </div>
               }
               animation={fadeInRight}
@@ -80,17 +88,53 @@ const AboutMe2 = () => {
             <Scrolls
               page={3}
               content={
-                <div>
-                  <img src={require('../assets/images/csharp.png')} className='rounded-md' alt='' />
-                  <span>C#</span>
+                <div className='flex flex-col items-center justify-center text-center gap-10 text-shadow-xl'>
+                  <img
+                    src={require('../assets/images/htmlCssJs.jpeg')}
+                    className='rounded-md w-auto md:w-1/2 shadow-xl'
+                    alt=''
+                  />
+                  <span>Web Development</span>
                 </div>
               }
               animation={fadeInLeft}
             />
           </div>
+          <div className='h-screen'>
+            <Scrolls
+              page={4}
+              content={
+                <div className='flex flex-col items-center justify-center text-center gap-10 text-shadow-xl'>
+                  <img
+                    src={require('../assets/images/reactJs.png')}
+                    className='rounded-md w-auto md:w-1/2 shadow-xl'
+                    alt=''
+                  />
+                  <span>C#</span>
+                </div>
+              }
+              animation={fadeInRight}
+            />
+          </div>
+          <div className='h-screen'>
+            <Scrolls
+              page={5}
+              content={
+                <div className='flex flex-col items-center justify-center text-center gap-10 text-shadow-xl'>
+                  <img
+                    src={require('../assets/images/tailwindCSS.png')}
+                    className='rounded-md w-auto md:w-1/2 shadow-xl'
+                    alt=''
+                  />
+                  <span>C#</span>
+                </div>
+              }
+              animation={fadeInRight}
+            />
+          </div>
         </div>
       </div>
-      <div className='h-screen'>asdf</div>
+      <div className='h-screen pt-20'>asdf</div>
       <Footer />
     </div>
   )
