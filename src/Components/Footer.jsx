@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 let Links = [
-  { name: 'HOME', path: '/' },
+  { name: 'HOME', path: '/portfolio' },
   { name: 'ABOUT ME', path: '/aboutme' },
   { name: 'PROJECTS', path: '/projects' },
 ]
