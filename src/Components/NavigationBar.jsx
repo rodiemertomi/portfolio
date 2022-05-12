@@ -4,7 +4,7 @@ import Button from './Button'
 
 const NavigationBar = () => {
   let Links = [
-    { name: 'HOME', path: '/' },
+    { name: 'HOME', path: '/portfolio' },
     { name: 'ABOUT ME', path: '/aboutme' },
     { name: 'PROJECTS', path: '/projects' },
   ]
@@ -13,8 +13,8 @@ const NavigationBar = () => {
     <div className='shadow-md w-full sticky top-0 left-0 z-[1] text-shadow-md font-bold'>
       <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
         <div className='font-bold text-2xl md:text-3xl cursor-pointer flex items-center font-Lora text-black'>
-          <div className='hover:text-lightblue transition-all duration-200'>
-            <Link to='/'>Tomi</Link>
+          <div className='hover:text-lightblue transition-all duration-200 w-[10vw]'>
+            <Link to='/portfolio'>{`<T/>`}</Link>
           </div>
         </div>
         <div
