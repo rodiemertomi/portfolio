@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <NavigationBar />
       <Routes>
-        <Route exact path='/' element={<Profile />} />
+        <Route exact path='/portfolio' element={<Profile />} />
         <Route exact path='/aboutme' element={<AboutMe2 />} />
         <Route exact path='/Projects' element={<Projects />} />
       </Routes>
