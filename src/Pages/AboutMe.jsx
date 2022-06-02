@@ -1,15 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Footer from '../Components/Footer'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Carousel from 'react-elastic-carousel'
 import Button from '../Components/Button'
 import { Link } from 'react-router-dom'
+import { useInView } from 'react-intersection-observer'
 
 const AboutMe = () => {
   useEffect(() => {
     Aos.init()
   }, [])
+
+  const { ref: mySkillsRef, inView: mySkillInView } = useInView()
 
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -34,7 +37,13 @@ const AboutMe = () => {
           </div>
         </div>
         <div>
-          <div className='flex justify-center sticky top-[68px] z-10 left-0' data-aos='fade-down'>
+          <div
+            className={`flex justify-center sticky top-[68px] z-10 left-0 py-4 ${
+              mySkillInView ? `bg-lightblue` : ''
+            }`}
+            data-aos='fade-down'
+            ref={mySkillsRef}
+          >
             <span className='font-Lora text-3xl text-shadow-md text-black'>My Skills</span>
           </div>
           <section className='lg:flex lg:justify-around' data-aos='fade-up' data-aos-offset='500'>
@@ -69,7 +78,7 @@ const AboutMe = () => {
           </section>
           <section className='lg:flex lg:justify-around' data-aos='fade-up' data-aos-offset='500'>
             <div
-              data-aos='fade-right'
+              data-aos='fade-up'
               data-aos-offset='500'
               className='h-[80%] bg-lightblue flex flex-col items-center pt-10 justify-between'
             >
@@ -97,7 +106,7 @@ const AboutMe = () => {
               </span>
             </div>
             <div
-              data-aos='fade-left'
+              data-aos='fade-up'
               data-aos-offset='500'
               className='h-[80%] bg-lightblue flex flex-col items-center pt-10 justify-between'
             >
@@ -117,7 +126,7 @@ const AboutMe = () => {
             data-aos-offset='500'
           >
             <div
-              data-aos='fade-right'
+              data-aos='fade-up'
               data-aos-offset='550'
               className='h-[80%] bg-lightblue flex flex-col items-center pt-10 justify-between'
             >
@@ -131,7 +140,7 @@ const AboutMe = () => {
               </span>
             </div>
             <div
-              data-aos='fade-left'
+              data-aos='fade-up'
               data-aos-offset='550'
               className='h-[80%] bg-lightblue flex flex-col items-center pt-10 justify-between'
             >
@@ -148,7 +157,7 @@ const AboutMe = () => {
         </div>
         <div className='h-screen pt-20 flex flex-col gap-20'>
           <div
-            className='flex justify-center sticky top-[68px] z-10 left-0'
+            className='flex justify-center sticky top-[68px] z-10 left-0 py-4'
             data-aos='fade-down'
             data-aos-offset='500'
           >
@@ -164,7 +173,9 @@ const AboutMe = () => {
             <Carousel breakPoints={breakPoints}>
               <div className='flex flex-col justify-center items-center md:px-5'>
                 <img src={require('../assets/gifs/calculator.gif')} alt='' />
-                <h1>Calculator</h1>
+                <h1 className='font-Lora text-xl lg:text-4xl pt-5 tracking-widest text-black font-black'>
+                  Calculator
+                </h1>
                 <a
                   href='https://rodiemertomi.github.io/Calculator/'
                   target='_blank'
@@ -175,7 +186,9 @@ const AboutMe = () => {
               </div>
               <div className='flex flex-col justify-center items-center md:px-5'>
                 <img src={require('../assets/gifs/tictactoe.gif')} alt='' />
-                <h1>TicTacToe</h1>
+                <h1 className='font-Lora text-xl lg:text-4xl pt-5 tracking-widest text-black font-black'>
+                  TicTacToe
+                </h1>
                 <a
                   href='https://rodiemertomi.github.io/TicTacToe/'
                   target='_blank'
@@ -186,14 +199,18 @@ const AboutMe = () => {
               </div>
               <div className='flex flex-col justify-center items-center md:px-5'>
                 <img src={require('../assets/gifs/momentum.gif')} alt='' />
-                <h1>Momentum App</h1>
+                <h1 className='font-Lora text-xl lg:text-4xl pt-5 tracking-widest text-black font-black'>
+                  Momentum App
+                </h1>
                 <a href='https://rodiemertomi.github.io/Momentum/' target='_blank' rel='noreferrer'>
                   <Button>Try it</Button>
                 </a>
               </div>
               <div className='flex flex-col justify-center items-center md:px-5'>
                 <img src={require('../assets/gifs/landingpage.gif')} alt='' />
-                <h1>Product Landing Page</h1>
+                <h1 className='font-Lora text-xl lg:text-4xl pt-5 tracking-widest text-black font-black'>
+                  Product Landing Page
+                </h1>
                 <a
                   href='https://rodiemertomi.github.io/ProductLandingPage/'
                   target='_blank'
@@ -208,7 +225,6 @@ const AboutMe = () => {
         <div
           className='flex justify-center items-center lg:pb-32 lg:pt-10 pb-5 pt-5'
           data-aos='fade-up'
-          data-aos-offset='300'
         >
           <Button>
             <Link to='/projects'>See More</Link>
