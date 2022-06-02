@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.c9276614.css",
-    "main.js": "/portfolio/static/js/main.c3f28e3e.js",
+    "main.css": "/portfolio/static/css/main.be81e0e8.css",
+    "main.js": "/portfolio/static/js/main.a1fcc961.js",
+    "static/media/landingpage.gif": "/portfolio/static/media/landingpage.d30bf103bbef69e50035.gif",
+    "static/media/momentum.gif": "/portfolio/static/media/momentum.582ea381ef55be0ea3e8.gif",
+    "static/media/tictactoe.gif": "/portfolio/static/media/tictactoe.c991efeed04af2408156.gif",
+    "static/media/calculator.gif": "/portfolio/static/media/calculator.3d12a679b8bcd577119f.gif",
     "static/media/latest.jpg": "/portfolio/static/media/latest.20ce66778d21b2a789ad.jpg",
-    "static/media/htmlCssJs.jpeg": "/portfolio/static/media/htmlCssJs.893b0339f5e390c8cf70.jpeg",
-    "static/media/tailwindCSS.png": "/portfolio/static/media/tailwindCSS.283a542d2ad3974fc278.png",
-    "static/media/reactJs.png": "/portfolio/static/media/reactJs.7672ebf5a05c97267a97.png",
-    "static/media/javaLogo.jpg": "/portfolio/static/media/javaLogo.4757c6d12d4f0245d07c.jpg",
     "index.html": "/portfolio/index.html",
-    "main.c9276614.css.map": "/portfolio/static/css/main.c9276614.css.map",
-    "main.c3f28e3e.js.map": "/portfolio/static/js/main.c3f28e3e.js.map"
+    "main.be81e0e8.css.map": "/portfolio/static/css/main.be81e0e8.css.map",
+    "main.a1fcc961.js.map": "/portfolio/static/js/main.a1fcc961.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9276614.css",
-    "static/js/main.c3f28e3e.js"
+    "static/css/main.be81e0e8.css",
+    "static/js/main.a1fcc961.js"
   ]
 }
