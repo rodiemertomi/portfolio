@@ -27,14 +27,10 @@ const NavigationBar = () => {
         } transition-all duration-300 ${open ? 'bg-white' : ''}`}
       >
         <div className='flex items-center justify-between py-4 md:px-10 px-7'>
-          <div className='font-bold text-2xl md:text-3xl cursor-pointer flex items-center font-Lora text-black'>
-            <div
-              className={`${
-                isScrolled ? 'xl:hover:text-lightblue' : 'xl:hover:text-white'
-              } w-[10vw] transition-all duration-300`}
-            >
-              <Link to='/portfolio'>{`<T/>`}</Link>
-            </div>
+          <div className='h-auto'>
+            <Link to='/portfolio'>
+              <img src={require('../assets/gifs/T.gif')} alt='' className='h-14' />
+            </Link>
           </div>
           <div
             onClick={() => setOpen(!open)}
