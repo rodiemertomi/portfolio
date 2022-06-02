@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import NavigationBar from './Components/NavigationBar'
 import Profile from './Pages/Profile'
 import Projects from './Pages/Projects'
-import AboutMe2 from './Pages/AboutMe2'
+import AboutMe from './Pages/AboutMe'
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <NavigationBar />
       <Routes>
         <Route exact path='/portfolio' element={<Profile />} />
-        <Route exact path='/aboutme' element={<AboutMe2 />} />
+        <Route exact path='/aboutme' element={<AboutMe />} />
         <Route exact path='/Projects' element={<Projects />} />
       </Routes>
     </BrowserRouter>
