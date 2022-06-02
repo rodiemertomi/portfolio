@@ -64,7 +64,12 @@ const Footer = () => {
         <ul>
           {Socials.map(element => (
             <li key={element.name}>
-              <a href={element.path} target='_blank' rel='noreferrer'>
+              <a
+                href={element.path}
+                target='_blank'
+                rel='noreferrer'
+                className='text-black hover:text-lightblue transition-all duration-200'
+              >
                 <i className={element.icon}>{` ${element.name}`}</i>
               </a>
             </li>
