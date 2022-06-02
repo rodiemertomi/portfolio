@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import TomiSVG from '../Components/TomiSVG'
 import Footer from '../Components/Footer'
 import Button from '../Components/Button'
@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom'
 import '../logo.css'
 
 const Profile = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className='shadow-md bg-lightblue'>
       <div className='h-screen'>

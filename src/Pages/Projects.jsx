@@ -6,6 +6,7 @@ import Button from '../Components/Button'
 
 const Projects = () => {
   useEffect(() => {
+    window.scrollTo(0, 0)
     Aos.init()
   }, [])
 

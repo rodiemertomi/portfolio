@@ -9,6 +9,7 @@ import { useInView } from 'react-intersection-observer'
 
 const AboutMe = () => {
   useEffect(() => {
+    window.scrollTo(0, 0)
     Aos.init()
   }, [])
 
