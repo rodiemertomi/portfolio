@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../Components/Footer'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
