@@ -1,104 +1,149 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../Components/Footer'
-import { Fade, Sticky, MoveOut, batch, StickyIn, FadeIn, ZoomIn } from 'react-scroll-motion'
-import Scrolls from '../Components/Scrolls'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const AboutMe = () => {
-  const fadeUp = batch(Fade(), Sticky(), MoveOut(0, -1000))
-  const fadeUpRight = batch(Fade(), Sticky(), MoveOut(300, -1000))
-  const fadeUpLeft = batch(Fade(), Sticky(), MoveOut(-300, -1000))
-  const zoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn())
+  useEffect(() => {
+    Aos.init()
+  }, [])
 
   return (
-    <div className='bg-lightblue h-auto'>
-      <div className='z-[-1]'>
-        <Scrolls
-          page={0}
-          content={
-            <div className='flex flex-col md:flex-row md:justify-between items-center justify-between gap-20 text-left'>
-              <div>
-                <img
-                  src={require('../assets/images/latest.jpg')}
-                  alt='recognition.jpg'
-                  className='rounded-full w-auto shadow-xl'
-                />
-              </div>
-              <div>
-                <span className='text-lg font-Lora text-left text-shadow-xl'>
-                  Hi! I'm Rodiemer Tominez, an undergrad of Marine Transportation, in pursuit of my
-                  passion for Information Technology
-                </span>
-              </div>
+    <>
+      <div className='shadow-md bg-lightblue'>
+        <div className='h-screen'>
+          <div className='flex flex-col justify-center items-center h-4/5 w-auto gap-20'>
+            <div className='flex justify-center items-between'>
+              <img
+                src={require('../assets/images/latest.jpg')}
+                alt='latestPicture.jpg'
+                className='rounded-full lg:w-[25%] w-[50%] shadow-xl'
+              />
             </div>
-          }
-          animation={fadeUp}
-        />
-        <Scrolls
-          page={1}
-          content={
-            <div className='flex flex-col md:flex-row md:justify-between items-center justify-between gap-20 text-left'>
-              <div>
-                <img
-                  src={require('../assets/images/javaLogo.jpg')}
-                  alt='recognition.jpg'
-                  className='rounded-full w-auto shadow-xl'
-                />
-              </div>
-              <div>
-                <span className='text-lg font-Lora text-left text-shadow-xl'>
-                  Hi! I'm Rodiemer Tominez, an undergrad of Marine Transportation, in pursuit of my
-                  passion for Information Technology
-                </span>
-              </div>
+            <div className='text-lg lg:text-3xl font-Lora text-center text-shadow-xl text-black'>
+              Hi! I'm Rodiemer Tominez, an undergrad of Marine Transportation, <br></br>in pursuit
+              of my passion for Information Technology
             </div>
-          }
-          animation={fadeUpRight}
-        />
-        <Scrolls
-          page={2}
-          content={
-            <div className='flex flex-col md:flex-row md:justify-between items-center justify-between gap-20 text-left'>
-              <div>
-                <img
-                  src={require('../assets/images/latest.jpg')}
-                  alt='recognition.jpg'
-                  className='rounded-full w-auto shadow-xl'
-                />
-              </div>
-              <div>
-                <span className='text-lg font-Lora text-left text-shadow-xl'>
-                  Hi! I'm Rodiemer Tominez, an undergrad of Marine Transportation, in pursuit of my
-                  passion for Information Technology
-                </span>
-              </div>
+          </div>
+        </div>
+        <div>
+          <div className='flex justify-center bg-transparent'>
+            <span
+              data-aos='fade-up'
+              data-aos-offset='250'
+              className='font-Lora text-3xl text-shadow-md text-black'
+            >
+              My Skills
+            </span>
+          </div>
+          <section className='lg:flex lg:justify-around'>
+            <div
+              data-aos='fade-up'
+              data-aos-offset='500'
+              className='h-[80%] bg-lightblue flex flex-col items-center pt-10 justify-between'
+            >
+              <img
+                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg'
+                alt='Java'
+                className='rounded-3xl border-4 border-white border-opacity-75 lg:w-[100%] w-[50%] shadow-xl h-auto'
+              />
+              <span className='font-Lora text-xl lg:text-4xl pt-5 tracking-widest text-black font-black'>
+                Java
+              </span>
             </div>
-          }
-          animation={fadeUpLeft}
-        />
-        <Scrolls
-          page={3}
-          content={
-            <div className='flex flex-col md:flex-row md:justify-between items-center justify-between gap-20 text-left'>
-              <div>
-                <img
-                  src={require('../assets/images/latest.jpg')}
-                  alt='recognition.jpg'
-                  className='rounded-full w-auto shadow-xl'
-                />
-              </div>
-              <div>
-                <span className='text-lg font-Lora text-left text-shadow-xl'>
-                  Hi! I'm Rodiemer Tominez, an undergrad of Marine Transportation, in pursuit of my
-                  passion for Information Technology
-                </span>
-              </div>
+            <div
+              data-aos='fade-up'
+              data-aos-offset='500'
+              className='h-[80%] bg-lightblue flex flex-col items-center pt-10 justify-between'
+            >
+              <img
+                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'
+                alt='python'
+                className='rounded-3xl border-4 border-white border-opacity-75 lg:w-[100%] w-[50%] shadow-xl h-auto'
+              />
+              <span className='font-Lora text-xl lg:text-4xl pt-5 tracking-widest text-black font-black'>
+                Python
+              </span>
             </div>
-          }
-          animation={zoomInScrollOut}
-        />
+          </section>
+          <section className='lg:flex lg:justify-around'>
+            <div
+              data-aos='fade-right'
+              data-aos-offset='500'
+              className='h-[80%] bg-lightblue flex flex-col items-center pt-10 justify-between'
+            >
+              <img
+                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
+                alt='html'
+                className='rounded-3xl border-4 border-white border-opacity-75 lg:w-[100%] w-[50%] shadow-xl h-auto'
+              />
+              <span className='font-Lora text-xl lg:text-4xl pt-5 tracking-widest text-black font-black'>
+                HTML
+              </span>
+            </div>
+            <div
+              data-aos='fade-up'
+              data-aos-offset='500'
+              className='h-[80%] bg-lightblue flex flex-col items-center pt-10 justify-between'
+            >
+              <img
+                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
+                alt='CSS'
+                className='rounded-3xl border-4 border-white border-opacity-75 lg:w-[100%] w-[50%] shadow-xl h-auto'
+              />
+              <span className='font-Lora text-xl lg:text-4xl pt-5 tracking-widest text-black font-black'>
+                CSS
+              </span>
+            </div>
+            <div
+              data-aos='fade-left'
+              data-aos-offset='500'
+              className='h-[80%] bg-lightblue flex flex-col items-center pt-10 justify-between'
+            >
+              <img
+                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+                alt='JavaScript'
+                className='rounded-3xl border-4 border-white border-opacity-75 lg:w-[100%] w-[50%] shadow-xl h-auto'
+              />
+              <span className='font-Lora text-xl lg:text-4xl pt-5 tracking-widest text-black font-black'>
+                JavaScript
+              </span>
+            </div>
+          </section>
+          <section className='lg:flex lg:justify-around pb-20'>
+            <div
+              data-aos='fade-right'
+              data-aos-offset='550'
+              className='h-[80%] bg-lightblue flex flex-col items-center pt-10 justify-between'
+            >
+              <img
+                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+                alt='ReactJS'
+                className='rounded-3xl border-4 border-white border-opacity-75 lg:w-[100%] w-[50%] shadow-xl h-auto bg-white'
+              />
+              <span className='font-Lora text-xl lg:text-4xl pt-5 tracking-widest text-black font-black'>
+                React JS
+              </span>
+            </div>
+            <div
+              data-aos='fade-left'
+              data-aos-offset='550'
+              className='h-[80%] bg-lightblue flex flex-col items-center pt-10 justify-between'
+            >
+              <img
+                src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg'
+                alt='Tailwind CSS'
+                className='rounded-3xl border-4 border-white border-opacity-75 lg:w-[100%] w-[50%] shadow-xl h-auto bg-white'
+              />
+              <span className='font-Lora text-xl lg:text-4xl pt-5 tracking-widest text-black font-black'>
+                Tailwind CSS
+              </span>
+            </div>
+          </section>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   )
 }
 
