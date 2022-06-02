@@ -8,28 +8,28 @@
 }
 
 #logo {
-  animation: fill 2s ease forwards 3s;
+  animation: fill 2s alternate infinite;
 }
 
 #logo path:nth-child(1) {
   stroke-dasharray: 219;
   stroke-dashoffset: 219;
-  animation: line-anim 2s ease forwards;
+  animation: line-anim 2s alternate infinite;
 }
 #logo path:nth-child(2) {
   stroke-dasharray: 245;
   stroke-dashoffset: 245;
-  animation: line-anim 2s ease forwards 0.5s;
+  animation: line-anim 2s alternate infinite;
 }
 #logo path:nth-child(3) {
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
-  animation: line-anim 2s ease forwards 1s;
+  animation: line-anim 2s alternate infinite;
 }
 #logo path:nth-child(4) {
   stroke-dasharray: 142;
   stroke-dashoffset: 142;
-  animation: line-anim 2s ease forwards 1.5s;
+  animation: line-anim 2s alternate infinite;
 }
 
 @keyframes line-anim {
