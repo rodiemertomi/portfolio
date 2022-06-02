@@ -20,49 +20,55 @@ const NavigationBar = () => {
 
   window.addEventListener('scroll', changeNavBarColor)
   return (
-    <div
-      className={`w-full sticky top-0 left-0 z-[1] text-shadow-md font-bold ${
-        isScrolled ? `bg-white shadow-md` : `bg-lightblue`
-      } transition-all duration-300 ${open ? 'bg-white' : ''}`}
-    >
-      <div className='flex items-center justify-between py-4 md:px-10 px-7'>
-        <div className='font-bold text-2xl md:text-3xl cursor-pointer flex items-center font-Lora text-black'>
-          <div
-            className={`${
-              isScrolled ? 'hover:text-lightblue' : 'hover:text-white'
-            } w-[10vw] transition-all duration-300`}
-          >
-            <Link to='/portfolio'>{`<T/>`}</Link>
+    <>
+      <div
+        className={`w-full sticky top-0 z-50 text-shadow-md font-bold ${
+          isScrolled ? `bg-white shadow-md` : `bg-lightblue`
+        } transition-all duration-300 ${open ? 'bg-white' : ''}`}
+      >
+        <div className='flex items-center justify-between py-4 md:px-10 px-7'>
+          <div className='font-bold text-2xl md:text-3xl cursor-pointer flex items-center font-Lora text-black'>
+            <div
+              className={`${
+                isScrolled ? 'xl:hover:text-lightblue' : 'xl:hover:text-white'
+              } w-[10vw] transition-all duration-300`}
+            >
+              <Link to='/portfolio'>{`<T/>`}</Link>
+            </div>
           </div>
-        </div>
-        <div
-          onClick={() => setOpen(!open)}
-          className='text-3xl absolute right-8 top-4 cursor-pointer lg:hidden'
-        >
-          <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
-        </div>
-        <ul
-          className={`md:flex md:items-center lg:justify-center md:justify-between lg:gap-10 md:gap-6 gap-16 font-Lora text-2xl md:text-3xl lg:py-0 md:py-8 pb-12 absolute lg:static ${
-            isScrolled ? `bg-white` : `bg-lightblue`
-          } md:z-auto z-[-1] left-0 w-full md:w-full md:pl-0 pl-9 lg:pr-0 md:pr-4 transition-all duration-300 ease-in-out ${
-            open ? 'top-20 bg-white' : 'top-[-300px]'
-          }`}
-        >
-          {Links.map(link => (
-            <li className='md:ml-8 text-2xl md:my-0 my-7' key={link.name}>
-              <Link
-                to={link.path}
-                className={`text-black ${
-                  isScrolled ? 'hover:text-lightblue' : 'hover:text-white'
-                } transition-all duration-300`}
+          <div
+            onClick={() => setOpen(!open)}
+            className='text-3xl absolute right-8 top-4 cursor-pointer lg:hidden'
+          >
+            <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
+          </div>
+          <ul
+            className={`md:flex md:items-center lg:justify-center md:justify-between lg:gap-10 md:gap-6 gap-16 font-Lora text-2xl md:text-3xl lg:py-0 md:py-8 pb-12 absolute lg:static ${
+              isScrolled ? `bg-white` : `bg-lightblue`
+            } md:z-auto z-[-1] left-0 w-full md:w-full md:pl-0 pl-9 lg:pr-0 md:pr-4 transition-all duration-300 ease-in-out ${
+              open ? 'top-20 bg-white' : 'top-[-300px]'
+            }`}
+          >
+            {Links.map(link => (
+              <li
+                className='md:ml-8 text-2xl md:my-0 my-7'
+                key={link.name}
+                onClick={() => setOpen(false)}
               >
-                {link.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+                <Link
+                  to={link.path}
+                  className={`text-black ${
+                    isScrolled ? 'xl:hover:text-lightblue' : 'xl:hover:text-white'
+                  } transition-all duration-300`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
