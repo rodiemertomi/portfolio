@@ -29,7 +29,7 @@ const NavigationBar = () => {
         <div className='flex items-center justify-between py-4 md:px-10 px-7'>
           <div className='h-auto'>
             <Link to='/portfolio'>
-              <img src={require('../assets/gifs/T.gif')} alt='' className='lg:h-10 h-8' />
+              <img src={require('../assets/gifs/T.gif')} alt='' className='h-8' />
             </Link>
           </div>
           <div
