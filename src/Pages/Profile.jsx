@@ -20,9 +20,11 @@ const Profile = () => {
             <div>Hi, I'm</div>
             <TomiSVG />
             <div>A Web Developer.</div>
-            <Button>
-              <Link to='/aboutme'>Learn More</Link>
-            </Button>
+            <div>
+              <Link to='/aboutme'>
+                <Button>Learn More</Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
