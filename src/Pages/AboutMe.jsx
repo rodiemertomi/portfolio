@@ -287,9 +287,11 @@ const AboutMe = () => {
           className='flex justify-center items-center lg:pb-32 lg:pt-10 pb-5 pt-5'
           data-aos='fade-up'
         >
-          <Button>
-            <Link to='/projects'>See More</Link>
-          </Button>
+          <div>
+            <Link to='/projects'>
+              <Button>Learn More</Button>
+            </Link>
+          </div>
         </div>
       </div>
       <Footer />
