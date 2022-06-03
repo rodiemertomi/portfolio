@@ -77,7 +77,7 @@ const AboutMe = () => {
           <div
             className='text-lg lg:text-3xl font-Lora text-center text-shadow-xl text-black 2xl:w-1/2 pb-20 lg:w-3/4 px-5'
             data-aos='fade-up'
-            data-aos-offset='150'
+            data-aos-offset='400'
           >
             This is the certificate I received here at STI Global City. It is for finishing a course
             using SAPB1, a business management software designed for small and medium-sized
